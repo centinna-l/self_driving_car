@@ -57,6 +57,7 @@ def region_of_interest(image):
     masked_image = cv2.bitwise_and(image, mask)
     return masked_image
 
+
     # to insert the image we use the imread() function of the openCV
 image = cv2.imread('test_image.jpg')
 
@@ -78,7 +79,10 @@ lane_image = np.copy(image)
 # we use gaussianblur to remove unwanted noise and
 # blur the image inorder to get the better edge
 # GaussianBlur(image, (kernerl,kernel), deviation)
-
+# cv2.VideoCapture is used to capture the video
+# we use the .read() to get the two value
+# '_'represents the boolean
+# frame is the individual images frames of the video
 
 cap_video = cv2.VideoCapture("test2.mp4")
 while(cap_video.isOpened):
