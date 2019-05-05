@@ -2,6 +2,9 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 
+# step1- convert the image to grayscale then use the gaussian blur
+#
+
 
 def make_coordinates(image, line_parameters):
     slope, intercept = line_parameters
@@ -56,7 +59,6 @@ def region_of_interest(image):
     cv2.fillPoly(mask, polygons, 255)
     masked_image = cv2.bitwise_and(image, mask)
     return masked_image
-
 
     # to insert the image we use the imread() function of the openCV
 image = cv2.imread('test_image.jpg')
